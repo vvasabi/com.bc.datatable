@@ -1,6 +1,6 @@
 ## Demo for PrimeFaces DataTable that Persists State Across Requests
 
-![Screenshot](vvasabi.github.com/com.bc.datatable/screenshot.png)
+![Screenshot](https://github.com/vvasabi/com.bc.datatable/blob/master/screenshot.png?raw=true)
 
 For more info, see [my post](http://www.bradchen.com/2012/05/persist-primefaces-datatable-state-across-refresh).
 

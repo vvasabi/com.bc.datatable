@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<title>Persistent DataTable State Demo</title>
+	</h:head>
+	<h:body>
+		<p:panel id="mainPanel">
+			<f:facet name="header">
+				Persistent DataTable State Demo
+			</f:facet>
+
+			<h:form>
+				<p:dataTable var="city" value="#{cityDataModel}"
+						paginator="true" rowsPerPageTemplate="12,24,48,96"
+						paginatorPosition="bottom"
+						binding="#{cityDataModel.dataTable}" lazy="true">
+
+					<f:event type="preRenderComponent"
+						listener="#{cityDataModel.preRenderComponent}" />
+
+					<f:facet name="header">
+						Canadian Cities
+					</f:facet>
+
+					<p:column headerText="Name" sortBy="#{city.name}"
+							filterBy="#{city.name}">
+						#{city.name}
+					</p:column>
+
+					<p:column headerText="ASCII Name" sortBy="#{city.asciiName}"
+							filterBy="#{city.asciiName}">
+						#{city.asciiName}
+					</p:column>
+
+					<p:column headerText="Latitude" sortBy="#{city.latitude}">
+						#{city.latitude}
+					</p:column>
+
+					<p:column headerText="Longitude" sortBy="#{city.longitude}">
+						#{city.longitude}
+					</p:column>
+
+					<p:column headerText="Time Zone" sortBy="#{city.timeZone}"
+							filterBy="#{city.timeZone}">
+						#{city.timeZone}
+					</p:column>
+
+					<p:column headerText="Population">
+						#{city.population}
+					</p:column>
+
+					<p:column headerText="Province" sortBy="#{city.province}"
+							filterBy="#{city.province}">
+						#{city.province}
+					</p:column>
+				</p:dataTable>
+			</h:form>
+
+			<f:facet name="footer">
+				Data Source: GeoNames
+			</f:facet>
+		</p:panel>
+	</h:body>
+</html>

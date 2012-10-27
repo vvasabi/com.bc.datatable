@@ -1,4 +1,4 @@
-== Demo for PrimeFaces DataTable that Persists State Across Requests
+## Demo for PrimeFaces DataTable that Persists State Across Requests
 
 For more info, see [my post](http://www.bradchen.com/2012/05/persist-primefaces-datatable-state-across-refresh).
 
